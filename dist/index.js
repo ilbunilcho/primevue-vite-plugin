@@ -10,9 +10,9 @@ function importPlugin(_options = {}) {
     return {
         name: 'primevue:import',
         configResolved(config) {
-            if (config.plugins.indexOf(this) < config.plugins.findIndex(plugin => plugin.name === 'vite:vue')) {
-                throw new Error('PrimeVue plugin must be loaded after the vue plugin');
-            }
+            //if (config.plugins.indexOf(this) < config.plugins.findIndex(plugin => plugin.name === 'vite:vue')) {
+            //    throw new Error('PrimeVue plugin must be loaded after the vue plugin');
+            //}
         },
         async transform(code, id) {
             const { query, path } = (0, imports_1.parseId)(id);
